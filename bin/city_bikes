@@ -1,5 +1,13 @@
 #!/usr/bin/env ruby
+#start named city_bikes / the executables
 
 require_relative '../lib/environment'
 puts "Hello"
-#initialize cli class & call the start method 
+
+#initialize cli class & call the start method aka #call cli class
+#very little code to start your program
+#ruby bin/city_bikes
+
+CLI.new.start
+cli_instance = CLI.new
+cli_instance.start
