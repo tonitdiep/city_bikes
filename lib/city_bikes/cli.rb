@@ -1,8 +1,8 @@
 class CLI
-#start method & logic
+#start method & logic (tracks interaction w/ user file)
 
     # def city_bikes <-not yet =>no such file/directory(Load Error)
-    #     puts "Welcome"
+        # puts "Welcome"
     # end
 
 end

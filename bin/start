@@ -1,5 +1,5 @@
-#!/usr/bin/env ruby
-#start named city_bikes / the executables
+#!/usr/bin/env ruby   tells files we're running ruby
+#starter is the executables
 
 require_relative '../lib/environment'
 puts "Hello"
