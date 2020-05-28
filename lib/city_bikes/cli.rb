@@ -1,14 +1,17 @@
 class CLI
 #start method & logic (tracks interaction w/ user file)
 
-    # def city_bikes <-not yet =>no such file/directory(Load Error)
-        # puts "Welcome"
-    # end
-
+    def start 
+    # <-not yet =>no such file/directory(Load Error)
+        puts "Welcome"
+        API.pick_stations
+    end
+  
 end
 
-#api file #bike file 
 
+
+#api file #bike file 
 #def of purpose from lecture:
 # interacts w/ user 
 # include puts gets statements
