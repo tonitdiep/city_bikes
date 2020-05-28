@@ -12,4 +12,4 @@ require 'json'
 #require relative  -the other files in our lib folder
 require_relative './city_bikes/cli' #use when file is w/in our directory
 require_relative './city_bikes/api' 
-require_relative './city_bikes/bikes' 
+require_relative './city_bikes/bike' 
