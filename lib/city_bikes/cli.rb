@@ -28,40 +28,35 @@ class CLI
         Bike.all.each.with_index(1) do |bike, index|
             puts "#{index}. #{bike.name}"
         end
-
     end
     def ask_user_for_bike_choice
     #     #ask user to make a bike choice
         input = gets.strip.to_i - 1     #change from string to integter to index w/ -1
         index = input - 1
                     # or index = gets.strip.to_i - 1
-
         #validate their input
         #if input is between the range of the list
         max_limit = Bike.all.length - 1
-        unless index.between?(0, max_limit)    #unless given valid index check, we can reask for thier index# if statements/ooleans #more flexibile # not hard coding
+        
+        until index.between?(0, max_limit)    #unless given valid index check, we can reask for thier index# #more flexibile # not hard coding
             puts "Sorry this choice is invalid."
             index = gets.strip.to_i - 1     # ask another ? after invalid choice (mini loop)
         #if not in between, so ask for their choice again^
         end
         #found their bike choice
-        bike_instance = Bike.all[index]
-        
+        bike_instance = Bike.all[index]   
         #print out their choice
-        puts bike_instance.name
-
-
-    #     until input.between?(0, max_limit)
-    #         puts "Sorry, that is an invalid choice."
-    #         input = gets.strip.to_i - 1
-    #     end   
-    # #     # bike_instance = Bike.all[index]
-    # #     #  #bike choice decided and is saved
-      
-    # #     # display_list_of_bikes(bike_instance)
-    # #     #   #calls method to print bike details
+            # puts bike_instance.name  or
+        #now consider: call the method that will print out the details
+        display_bike_details(bike_instance)
     end
 
+    def display_bike_details(bike_instance)
+        #know about their bike chosen choice
+        puts "Empty_Slots:" + bike.empty_slots
+        puts "Free_Bikes:" + bike.free_bikes
+        puts "Name:" + bike.name
+    end
 end
 
 
@@ -71,4 +66,4 @@ end
 #def of purpose from lecture:
 # interacts w/ user 
 # include puts gets statements
-# control the flow of the progra
+# control the flow of the program
