@@ -6,9 +6,9 @@ class Bike
     def initialize
         @@all << self
     end
-    # parking=> bikes_instance.empty_slots = station_hash["empty_slots"]
-    # avail=> bikes bikes_instance.free_bikes = station_hash["free_bikes"]
-    # stations=> name/address bikes_instance.name = station_hash["name"]
+    # parking=> station_instance.empty_slots = station_hash["empty_slots"]
+    # avail=>  station_instance.free_bikes = station_hash["free_bikes"]
+    # stations=> name/address station_instance.name = station_hash["name"]
 
     def self.all
         @@all
@@ -18,6 +18,6 @@ end
 
 
 
-# bikes_instance.empty_slots = station_hash["empty_slots"]
-# bikes_instance.free_bikes = station_hash["free_bikes"]
-# bikes_instance.name = station_hash["name"]
+# station_instance.empty_slots = station_hash["empty_slots"]
+# station_instance.free_bikes = station_hash["free_bikes"]
+# stationyes_instance.name = station_hash["name"]

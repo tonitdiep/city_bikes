@@ -9,5 +9,5 @@ puts "Hello"
 #ruby bin/city_bikes
 
 CLI.new.start
-cli_instance = CLI.new
-cli_instance.start
+# cli_instance = CLI.new
+# cli_instance.start

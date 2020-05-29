@@ -37,14 +37,14 @@ class CLI
     end
     def ask_user_for_bike_choice
     #     #ask user to make a bike choice
-        input = gets.strip.to_i - 1     #change from string to integter to index w/ -1
+        input = gets.strip.to_i     #change from string to integter to index w/ -1
         index = input - 1
                     # or index = gets.strip.to_i - 1
         #validate their input
         #if input is between the range of the list
         max_limit = Bike.all.length - 1
         
-        until index.between?(0, max_limit)    #unless given valid index check, we can reask for thier index# #more flexibile # not hard coding
+        until index.between?(0, max_limit)    #unless given valid index check, we can re-ask for thier index# #more flexibile # not hard coding
             puts "Sorry this choice is invalid."
             index = gets.strip.to_i - 1     # ask another ? after invalid choice (mini loop)
         #if not in between, so ask for their choice again^
@@ -61,10 +61,11 @@ class CLI
     #     #know about their bike chosen choice
         # sleep(1)
         puts "\n"   #spacing esc characters on own line
-        puts = station.name
+    
         puts "\nEmpty_Slots:" + station.empty_slots.to_s
         puts "\nFree_Bikes:" + station.free_bikes.to_s
         puts "\nName:" + station.name
+ 
     end
 end
 
