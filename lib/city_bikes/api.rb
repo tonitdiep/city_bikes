@@ -12,12 +12,11 @@ class API
         array_of_stations.each do |station_hash|    
             #initialize a new station
             #assign attributes to it
-            bike_instance = Bike.new
+            station_instance = Bike.new
 
-            bike_instance.empty_slots = station_hash["empty_slots"]
-            bike_instance.free_bikes = station_hash["free_bikes"]
-            bike_instance.name = station_hash["name"]
+            station_instance.empty_slots = station_hash["empty_slots"]
+            station_instance.free_bikes = station_hash["free_bikes"]
+            station_instance.name = station_hash["name"]
         end
-
     end
 end

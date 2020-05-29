@@ -14,19 +14,25 @@ class CLI
         user_input = gets.strip.downcase   #user's input w/ the gets method, no extra white spaces
         if user_input == "yes" || user_input == "y"
             puts "Awesome, let's get started!"
-            display_list_of_bikes
+            display_list_of_stations
             ask_user_for_bike_choice
+            # found_choice = ask_user_for_bike_choice
+            # display_station_details(station_instance)
+            # sleep(1)  ##waits b/4 a sec b/4 starting off
+            directory ##return to directory(menu)
+            #elsif something
+                #directory (recursion
         else
             #end the program 
             puts "Goodbye!"
         end    
     end
 
-    def display_list_of_bikes     #display list of bikes at said bike station
+    def display_list_of_stations     #display list of bikes at said bike station
         #1) show access to bikes
         #2) show access to dock bikes
-        Bike.all.each.with_index(1) do |bike, index|
-            puts "#{index}. #{bike.name}"
+        Bike.all.each.with_index(1) do |station, index|
+            puts "#{index}. #{station.name}"
         end
     end
     def ask_user_for_bike_choice
@@ -44,18 +50,21 @@ class CLI
         #if not in between, so ask for their choice again^
         end
         #found their bike choice
-        bike_instance = Bike.all[index]   
+        station_instance = Bike.all[index]   
         #print out their choice
-            # puts bike_instance.name  or
+            # puts station_instance.name  or
         #now consider: call the method that will print out the details
-        display_bike_details(bike_instance)
+        display_station_details(station_instance)
     end
 
-    def display_bike_details(bike_instance)
-        #know about their bike chosen choice
-        puts "Empty_Slots:" + bike.empty_slots
-        puts "Free_Bikes:" + bike.free_bikes
-        puts "Name:" + bike.name
+    def display_station_details(station)
+    #     #know about their bike chosen choice
+        # sleep(1)
+        puts "\n"   #spacing esc characters on own line
+        puts = station.name
+        puts "\nEmpty_Slots:" + station.empty_slots.to_s
+        puts "\nFree_Bikes:" + station.free_bikes.to_s
+        puts "\nName:" + station.name
     end
 end
 
