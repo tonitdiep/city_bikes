@@ -36,32 +36,36 @@ class CLI
         end
     end
     def ask_user_for_bike_choice
-    #     #ask user to make a bike choice
+    # #ask user to make a bike choice
         input = gets.strip.to_i     #change from string to integter to index w/ -1
         index = input - 1
                     # or index = gets.strip.to_i - 1
-        #validate their input
-        #if input is between the range of the list
-        max_limit = Bike.all.length - 1
         
+        #validate their input index b/t (0,-1)
+        # puts "Nice! Type 'access' or 'park'for a bike"
+        # puts ""
+        #if input is between the range of the list
+
+        max_limit = Bike.all.length - 1 
         until index.between?(0, max_limit)    #unless given valid index check, we can re-ask for thier index# #more flexibile # not hard coding
-            puts "Sorry this choice is invalid."
-            index = gets.strip.to_i - 1     # ask another ? after invalid choice (mini loop)
+            puts "Sorry this choice is invalid."   #invalid
+            index = gets.strip.to_i - 1   # ask another ? after invalid choice (mini loop)
         #if not in between, so ask for their choice again^
+       
         end
-        #found their bike choice
-        station_instance = Bike.all[index]   
-        #print out their choice
-            # puts station_instance.name  or
+   
+        station_instance = Bike.all[index]    #found their station choice & save it as a variable
+        
+            # puts station_instance.name    #print out their choice only like @name :11 st & 43 ave, not empty_slots, free_bikes
+        
+        display_station_details(station_instance) 
         #now consider: call the method that will print out the details
-        display_station_details(station_instance)
     end
 
     def display_station_details(station)
     #     #know about their bike chosen choice
         # sleep(1)
         puts "\n"   #spacing esc characters on own line
-    
         puts "\nEmpty_Slots:" + station.empty_slots.to_s
         puts "\nFree_Bikes:" + station.free_bikes.to_s
         puts "\nName:" + station.name

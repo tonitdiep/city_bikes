@@ -13,6 +13,17 @@ class Bike
     def self.all
         @@all
     end
+
+    def availabile_bikes(free_bikes)
+          binding.pry 
+        #   array_of_stations.all[1..101].select do |station| station.free_bikes
+        # station_hash["free_bikes"].all.select do |station|  station.free_bikes
+        # end
+    end
+
+    # def empty_sl
+    # end  
+    # def #find all free bikes @@all.find_by bike.all.free_bikes
 end
 
 
