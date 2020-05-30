@@ -16,6 +16,9 @@ GEM
     ffi (1.12.2)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
+    io-console (0.5.6)
+    irb (1.2.4)
+      reline (>= 0.0.1)
     json (2.3.0)
     method_source (1.0.0)
     minitest (5.14.1)
@@ -26,6 +29,8 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     rake (12.3.2)
+    reline (0.1.4)
+      io-console (~> 0.5)
     safe_yaml (1.0.5)
     thread_safe (0.3.6)
     typhoeus (1.4.0)
@@ -41,6 +46,7 @@ PLATFORMS
 
 DEPENDENCIES
   fetch (~> 0.0.5)
+  irb (~> 1.2, >= 1.2.4)
   json (~> 2.3)
   parse (~> 0.1.0)
   pry (~> 0.13.1)
