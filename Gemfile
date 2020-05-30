@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 
 
-gem "rake", "~> 12.0"
+gem "rake", "~> 12.3"
 gem 'pry', '~> 0.13.1'
 gem 'json', '~> 2.3'
 gem 'uri', '~> 0.10.0'
