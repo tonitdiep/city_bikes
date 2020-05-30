@@ -8,7 +8,7 @@ class CLI
     
     def directory 
         puts "Are you here for a bike ride?"   
-        #After the 'start' method, Users, are at the directory to access a stations's info and choices
+        #here Users, can access a stations's info and choices
         puts "Type 'yes' to continue or any other key to exit."     
         user_input = gets.strip.downcase   #user's input w/ the gets method, no extra white spaces
         if user_input == "yes" || user_input == "y"
@@ -16,8 +16,7 @@ class CLI
             display_list_of_stations
             ask_user_for_bike_choice    
             directory ##return to directory(menu)
-        else
-            
+        else       
             puts "Goodbye!"  #ends the program 
         end    
     end
