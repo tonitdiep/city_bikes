@@ -1,7 +1,6 @@
 class CLI
 #start method & logic (tracks interaction w/ user file)
     def start 
-    # <-not yet =>no such file/directory(Load Error)
         puts "Welcome"
         API.fetch_stations
         self.directory
@@ -15,26 +14,24 @@ class CLI
         if user_input == "yes" || user_input == "y"
             puts "Awesome, let's get started!"
             display_list_of_stations
-            ask_user_for_bike_choice
-            # found_choice = ask_user_for_bike_choice
-            # display_station_details(station_instance)
-            # sleep(1)  ##waits b/4 a sec b/4 starting off
+            ask_user_for_bike_choice    
             directory ##return to directory(menu)
-            #elsif something
-                #directory (recursion
         else
-            #end the program 
-            puts "Goodbye!"
+            
+            puts "Goodbye!"  #ends the program 
         end    
     end
 
-    def display_list_of_stations     #display list of bikes at said bike station
+    def display_list_of_stations     #display list of bikes per station
         #1) show access to bikes
         #2) show access to dock bikes
+        # Bike.availabile_bikes
         Bike.all.each.with_index(1) do |station, index|
             puts "#{index}. #{station.name}"
         end
     end
+
+
     def ask_user_for_bike_choice
     # #ask user to make a bike choice
         input = gets.strip.to_i     #change from string to integter to index w/ -1
@@ -56,7 +53,7 @@ class CLI
    
         station_instance = Bike.all[index]    #found their station choice & save it as a variable
         
-            # puts station_instance.name    #print out their choice only like @name :11 st & 43 ave, not empty_slots, free_bikes
+            # puts station_instance.name  
         
         display_station_details(station_instance) 
         #now consider: call the method that will print out the details
@@ -64,12 +61,10 @@ class CLI
 
     def display_station_details(station)
     #     #know about their bike chosen choice
-        # sleep(1)
         puts "\n"   #spacing esc characters on own line
         puts "\nEmpty_Slots:" + station.empty_slots.to_s
         puts "\nFree_Bikes:" + station.free_bikes.to_s
         puts "\nName:" + station.name
- 
     end
 end
 

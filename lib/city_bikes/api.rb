@@ -9,7 +9,7 @@ class API
         array_of_stations = hash["network"]["stations"]   
 
 
-        array_of_stations[1..101].each do |station_hash|    
+        array_of_stations[0..100].each do |station_hash|    
             #initialize a new station
             #assign attributes to it
             station_instance = Bike.new

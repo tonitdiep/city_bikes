@@ -14,11 +14,10 @@ class Bike
         @@all
     end
 
-    def availabile_bikes(free_bikes)
-          binding.pry 
-        #   array_of_stations.all[1..101].select do |station| station.free_bikes
-        # station_hash["free_bikes"].all.select do |station|  station.free_bikes
-        # end
+    def self.availabile_bikes
+        @@all.select do |bike| 
+        bike.free_bikes > 5 
+        end
     end
 
     # def empty_sl
