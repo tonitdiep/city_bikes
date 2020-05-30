@@ -1,6 +1,6 @@
 # CityBikes
 
-#CityBikes --a wonderful app for folks to access bikes stations for free bikes and to return them, whenver they needed it, per location request.
+#CityBikes --a wonderful app for folks to access the bikes stations and their details with available bikes to ride, and to empty slots to return bikes, at the next location.
 
 ## Installation
 
@@ -20,18 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: 
-1) Bin folder setup and its files: start, setup, and console. This inform the program that I'm operating on Ruby with the shabang, '# !/usr/bin/env ruby'. This is all preparation to executive files in the lib folder, such initializing the CLI class by calling the start method.
-2) Start file: 
-3) Lib folder: api.rb, bike.rb, cli.rb
-4) Environment: required any gems dealing with the API; make request to JSON url to retrieve data and parse with; require_relative all flies used in the api.rb, bike.rb, cli.rb 
-5) Gemfile: gem "rake", "~> 12.0", gem 'pry', '~> 0.13.1', gem 'json', '~> 2.3', gem 'uri', '~> 0.10.0', gem 'url', '~> 0.3.2', gem 'fetch', '~> 0.0.5', gem 'parse', '~> 0.1.0', gem 'irb', '~> 1.2', '>= 1.2.4
-
-
-#ruby bin/city_bikes
-#initialize cli class by calling the start method
-# very little code to start your program
-
+TODO: 'type' ruby bin/start to run the application and it's instructions.
 
 CLI.new.start
 # cli_instance = CLI.new
