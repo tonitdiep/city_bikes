@@ -22,9 +22,7 @@ Or install it yourself as:
 
 TODO: 'type' ruby bin/start to run the application and it's instructions.
 
-CLI.new.start
-# cli_instance = CLI.new
-# cli_instance.start
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
