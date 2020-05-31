@@ -33,6 +33,8 @@ end
     #     end
     # end
 
-    # def empty_sl
+    # def self.empty_slots
+        # @@all.select do |slots|
+        # slots.empty_slots > 10
     # end  
     # def #find all free bikes @@all.find_by bike.all.free_bikes
