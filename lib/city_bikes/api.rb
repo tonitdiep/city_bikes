@@ -8,17 +8,16 @@ class API
         hash = JSON.parse(response)
         array_of_stations = hash["network"]["stations"]   
 
-        array_of_stations[0..100].each do {|station_hash|} 
+        array_of_stations[0..100].each do |station_hash|
             #1)initialize a new station by only looking at stations of a specific range from [0..100] in this iteration 
             #2)assign attributes by the writer method to decide the station_hash
-           
-            station_hash = Bike.new
+   
             attr_hash = {  
                 empty_slots: station_hash["empty_slots"],
                 free_bikes: station_hash["free_bikes"],
                 name: station_hash["name"]
             }
-            Bike.new(attr_hash = {}) 
+            Bike.new(attr_hash) 
         end
     end
 end
