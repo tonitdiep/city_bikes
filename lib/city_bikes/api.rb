@@ -22,7 +22,7 @@ class API
             station_hash = Bike.new[:empty_slots, :free_bikes, :name]
             station_hash = { 
                 station_hash.empty_slots = attr_hash["empty_slots"],
-                station.hash.free_bikes = attr_hash["free_bikes"],
+                station_hash.free_bikes = attr_hash["free_bikes"],
                 station_hash.name = attr_hash["name"]
             }
 
