@@ -13,9 +13,9 @@ class API
             #2)assign attributes by the writer method to decide the station_hash
            
             attr_hash = {  
-                empty_slots = station_hash["empty_slots"]
-                free_bikes = station_hash["free_bikes"]
-                name = station_hash["name"]
+                empty_slots: station_hash["empty_slots"],
+                free_bikes: station_hash["free_bikes"],
+                name: station_hash["name"]
             }
             station_hash = Bike.new
             Bike.new(attr_hash={}) 
