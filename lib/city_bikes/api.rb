@@ -19,14 +19,15 @@ class API
             }
             
             Bike.new(attr_hash={}) 
-            station_hash = { 
-                @empty_slots = attr_hash[:empty_slots],
-                @free_bikes = attr_hash[:free_bikes],
-                @name = attr_hash[:name]
+            station_instance = Bike.new[:empty_slots, :free_bikes, :name]
+            station_instance = { 
+                station_hash.empty_slots = attr_hash["empty_slots"],
+                station.hash.free_bikes = attr_hash["free_bikes"],
+                station_hash.name = attr_hash["name"]
             }
-            Bike.new
+
             # station_instance = Bike.new[:empty_slots, :free_bikes, :name] #initialize objects 
-            #attributes that would be assigned thru station_hash
+            # #attributes that would be assigned thru station_hash
 
             # station_instance.empty_slots = station_hash["empty_slots"]
             # station_instance.free_bikes = station_hash["free_bikes"]
