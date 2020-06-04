@@ -12,15 +12,20 @@ class API
             #1)initialize a new station by only looking at stations of a specific range from [0..100] in this iteration 
             #2)assign attributes by the writer method to decide the station_hash
            
-            
+            station_hash = Bike.new
             attr_hash = {  
                 empty_slots: station_hash["empty_slots"],
                 free_bikes: station_hash["free_bikes"],
                 name: station_hash["name"]
             }
-            Bike.new(attr_hash={}) 
-      
-            # Bike.new[:empty_slots, :free_bikes, :name]
+            Bike.new(attr_hash = {}) 
+        end
+    end
+end
+
+
+
+  # Bike.new[:empty_slots, :free_bikes, :name]
             # station_hash = { 
             #     station_hash.empty_slots = attr_hash["empty_slots"],
             #     station_hash.free_bikes = attr_hash["free_bikes"],
@@ -33,6 +38,3 @@ class API
             # station_instance.empty_slots = station_hash["empty_slots"]
             # station_instance.free_bikes = station_hash["free_bikes"]
             # station_instance.name = station_hash["name"]
-        end
-    end
-end
