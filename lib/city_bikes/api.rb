@@ -17,11 +17,11 @@ class API
                 free_bikes: station_hash["free_bikes"],
                 name: station_hash["name"]
             }
-            station_hash = Bike.new
+            
             Bike.new(attr_hash={}) 
             station_hash = { 
-                @empty_slots = attr_hash[:empty_slots]
-                @free_bikes = attr_hash[:free_bikes]
+                @empty_slots = attr_hash[:empty_slots],
+                @free_bikes = attr_hash[:free_bikes],
                 @name = attr_hash[:name]
             }
             Bike.new
