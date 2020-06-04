@@ -13,14 +13,12 @@ class API
             #2)assign attributes by the writer method to decide the station_hash
            
             attr_hash = (:empty_slots, :free_bikes, :name)
-            Bike.new(attr_hash={})
-            
+            Bike.new(attr_hash={}) 
             station_hash = { 
                 @empty_slots = attr_hash[:empty_slots]
                 @free_bikes = attr_hash[:free_bikes]
                 @name = attr_hash[:name]
             }
-
             Bike.new
             # station_instance = Bike.new[:empty_slots, :free_bikes, :name] #initialize objects 
             #attributes that would be assigned thru station_hash
