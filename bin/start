@@ -1,13 +1,4 @@
-# !/usr/bin/env ruby     
-# tells files we're running ruby
-#starter is the executables
-
 require_relative '../lib/environment'
-
-
-#ruby bin/city_bikes
-#initialize cli class by calling the start method
-# very little code to start your program
 
 
 CLI.new.start

@@ -3,6 +3,7 @@ class Bike
 
     attr_accessor :empty_slots, :free_bikes, :name
     @@all = []
+
     def initialize(attr_hash={})
         @empty_slots = attr_hash[:empty_slots]
         @free_bikes = attr_hash[:free_bikes]
