@@ -1,7 +1,7 @@
 #get the data from uri, kinda like controller --> creating objects
 
 class API
-    def self.fetch_stations
+    def fetch_stations
         url = "http://api.citybik.es/v2/networks/citi-bike-nyc"
         uri = URI(url)
         response = Net::HTTP.get(uri)

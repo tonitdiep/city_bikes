@@ -19,6 +19,14 @@ class Bike
         @@all
     end
 
+    def display_free_bikes
+        "\nFree_Bikes:" + @free_bikes.to_s
+    end
+
+    # def lets_rent_now
+    
+    # end
+
 end
 
 

@@ -2,10 +2,10 @@ class CLI
 
     def start 
         puts "Welcome"
-        API.fetch_stations
+        API.new.fetch_stations     
         self.directory
     end
-    
+
     def directory 
         puts "Are you here for a bike ride?"   
         puts "Type 'yes' to continue or any other key to exit."     
@@ -42,8 +42,17 @@ class CLI
     def display_station_details(station)
         puts "\n"  
         puts "\nEmpty_Slots:" + station.empty_slots.to_s
-        puts "\nFree_Bikes:" + station.free_bikes.to_s
+        puts station.display_free_bikes 
+        # puts "\nFree_Bikes:" + station.free_bikes.to_s
         puts "\nName:" + station.name
+        lets_rent_now(station)
+    end
+
+    def lets_rent_now(station)
+        # set stations free_bikes - 1 per renting instance
+        puts "Let's start the renting process."
+        station.free_bikes = station.free_bikes.to_i - 1
+        station.empty_slots = station.empty_slots.to_i + 1
     end
 end
 
