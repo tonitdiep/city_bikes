@@ -6,7 +6,7 @@ CityBikes --a wonderful app for folks to access the bikes stations and their det
 
 Before you run this, be sure to run 'bundle install'.
 
-To run, please 'type' ruby bin/start to run the application and it's instructions.
+To run, please 'type' ruby bin/start to run the application and it's instructions about the application in the terminal.
 
 ## License 
 
