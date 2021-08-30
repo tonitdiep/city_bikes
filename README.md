@@ -1,6 +1,6 @@
 # CityBikes
 
-#CityBikes --a wonderful app for folks to access the bikes stations and their details with available bikes to ride, and to empty slots to return bikes, at the next location.
+CityBikes --a wonderful app for folks to access the bikes stations and their details with available bikes to ride, and to empty slots to return bikes, at the next location.
 
 ## Usage
 
